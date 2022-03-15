@@ -26,10 +26,10 @@ def process(df: DataFrame, file_out: str) -> dict:
 def process_file(file, output: str) -> dict:
     # do a thing
     df = parse.import_data_file(file)
-    return process(df, name=output)
+    return process(df, file_out=output)
 
 
 def process_local(file: str, output: str) -> dict:
     # do a thing
     df = parse.import_data(file)
-    return process(df, name=output)
+    return process(df, file_out=output)
