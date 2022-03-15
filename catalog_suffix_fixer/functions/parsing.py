@@ -106,7 +106,8 @@ def generate_new_records(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def save_df(df: pd.DataFrame, path: str) -> None:
-    os.makedirs("/".join(path.split("/")[0:-1]), exist_ok=True)
+    # os.makedirs("/".join(path.split("/")[0:-1]), exist_ok=True)
+    # path = "./static/resources/task_output/"
     df.to_csv(
         path, sep="\t"
     )  # Note: uses line terminator of current OS (Windows: \r\n | Linux: \n)
