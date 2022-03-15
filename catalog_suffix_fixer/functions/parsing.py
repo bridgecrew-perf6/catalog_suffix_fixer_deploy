@@ -1,5 +1,5 @@
 import pandas as pd
-from typing import Union, Tuple, List
+from typing import Union, Tuple, List, IO
 import re
 import string
 import os
@@ -7,6 +7,11 @@ import os
 
 def import_data(path: str) -> pd.DataFrame:
     df = pd.read_csv(path, header=[1])
+    return df
+
+
+def import_data_file(file: IO) -> pd.DataFrame:
+    df = pd.read_csv(file, header=[1])
     return df
 
 
