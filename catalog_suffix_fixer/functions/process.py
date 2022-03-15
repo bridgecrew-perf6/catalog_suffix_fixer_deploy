@@ -23,10 +23,10 @@ def process(df: DataFrame, name: str) -> dict:
     }
 
 
-def process_file(file: IO) -> dict:
+def process_file(file) -> dict:
     # do a thing
     df = parse.import_data_file(file)
-    return process(df, name=file.name)
+    return process(df, name="test")
 
 
 def process_local(file: str) -> dict:

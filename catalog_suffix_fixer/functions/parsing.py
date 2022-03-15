@@ -10,7 +10,7 @@ def import_data(path: str) -> pd.DataFrame:
     return df
 
 
-def import_data_file(file: IO) -> pd.DataFrame:
+def import_data_file(file) -> pd.DataFrame:
     df = pd.read_csv(file, header=[1])
     return df
 
