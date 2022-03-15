@@ -2,7 +2,7 @@ import re
 from catalog_suffix_fixer.functions import parsing as parse
 
 
-def process_file(file: str) -> dict:
+def process(file: str) -> dict:
     # do a thing
     df = parse.import_data(file)
     if not parse.verify_format(df):
